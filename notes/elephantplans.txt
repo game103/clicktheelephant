@@ -1,0 +1,22 @@
+elephants only
+
+level 1: elephant and giraffe
+level 2: mouseover elephant and giraffe switch
+level 3: moving elephant
+level 4: drag and drop
+level 5: 5 elephants, 2 giraffes
+level 6: peekabo elephant / giraffe
+level 7: changing elephant
+level 8: changing drag and drop
+level 9: maze to pen
+level 10: click 5 then giraffe click 6
+level 11: giffare chasing mouse elephant moving
+level 12: random giraffes and elephants changes every 5 seconds
+level 13: pick up peanuts, drag up, elephants come
+level 14: 10 grey giraffes and an elephant
+level 15: only can click when falling
+level 16: giraffes shooting across x axis at cursor
+level 17: giraffe guards - zelda like
+level 18: hidden elephant - invisible mouseover
+level 19: click to make bigger elephant -starts to small to see
+level 20: elephant moving in row of giraffes
