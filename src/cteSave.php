@@ -1,10 +1,15 @@
 <?php
-$username = $_POST['username'];
-$score = $_POST['score'];
+	error_reporting(0);
+		
+	set_include_path($_SERVER['DOCUMENT_ROOT']  . "/" . "modules");
 
+	// Require modules
+	require_once( 'Constants.class.php');
 
+	$username = $_POST['username'];
+	$score = $_POST['score'];
 
-$connect = mysql_connect("localhost","","");
+	$connect = mysql_connect(Constants::DB_HOST, Constants::DB_USER, Constants::DB_PASSWORD);
 	mysql_select_db("hallaby_clicktheelephant");
 
 	$str = "SELECT * FROM clicktheelephant";
