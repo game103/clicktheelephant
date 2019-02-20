@@ -6,15 +6,15 @@
 	// Require modules
 	require_once( 'Constants.class.php');
 
-	$connect = mysql_connect(Constants::DB_HOST, Constants::DB_USER, Constants::DB_PASSWORD);
-	mysql_select_db("hallaby_clicktheelephant");
+	$connect = mysqli_connect(Constants::DB_HOST, Constants::DB_USER, Constants::DB_PASSWORD);
+	mysqli_select_db($connect,"hallaby_clicktheelephant");
 
 	$str = "SELECT * FROM clicktheelephant";
-	$query = mysql_query($str);
+	$query = mysqli_query($connect,$str);
 	
-	$num = mysql_num_rows($query);
+	$num = mysqli_num_rows($query);
 	
-	while($rows = mysql_fetch_array($query)):
+	while($rows = mysqli_fetch_array($query)):
 
 		$hs1 = $rows['hs1'];
 		$hs2 = $rows['hs2'];
@@ -61,5 +61,5 @@
 	endwhile;
 	
 	echo "&hs1=$hs1&hs2=$hs2&hs3=$hs3&hs4=$hs4&hs5=$hs5&hs6=$hs6&hs7=$hs7&hs8=$hs8&hs9=$hs9&hs10=$hs10&hsuser1=$hsuser1&hsuser2=$hsuser2&hsuser3=$hsuser3&hsuser4=$hsuser4&hsuser5=$hsuser5&hsuser6=$hsuser6&hsuser7=$hsuser7&hsuser8=$hsuser8&hsuser9=$hsuser9&hsuser10=$hsuser10&wkhs1=$wkhs1&wkhs2=$wkhs2&wkhs3=$wkhs3&wkhs4=$wkhs4&wkhs5=$wkhs5&wkhs6=$wkhs6&wkhs7=$wkhs7&wkhs8=$wkhs8&wkhs9=$wkhs9&wkhs10=$wkhs10&wkhsuser1=$wkhsuser1&wkhsuser2=$wkhsuser2&wkhsuser3=$wkhsuser3&wkhsuser4=$wkhsuser4&wkhsuser5=$wkhsuser5&wkhsuser6=$wkhsuser6&wkhsuser7=$wkhsuser7&wkhsuser8=$wkhsuser8&wkhsuser9=$wkhsuser9&wkhsuser10=$wkhsuser10&nothing=1";
-	mysql_close();
+	mysqli_close($connect);
 ?>
